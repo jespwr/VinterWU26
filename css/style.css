@@ -1,1 +1,74 @@
-/* Här skrivs all din CSS */
+body {
+    width:100vw;
+    height:100vh;
+    font-size:1.2rem;
+    overflow-x:hidden;
+}
+
+.wrapper {
+    display:grid;
+    height:auto;
+    width:95vw;
+    margin: auto;
+    border: 5px solid hotpink;
+    padding:10px;
+    border-radius: 2rem;
+    background-color:rgb(28, 68, 76);
+    grid-template-rows: 20% 70% 10%;
+    grid-template-columns: 20% 40% 40%;
+    grid-template-areas:
+    'hd hd hd'
+    'it it it'
+    'ft ft ft'
+}
+
+header {
+    grid-area:hd;
+    display:grid;
+    width:100%;
+    background-color:aqua;
+    /*position:fixed; */
+    grid-template-areas:
+    'logo title nav'
+}
+
+.logo {
+    grid-area:logo;
+}
+
+.title {
+    grid-area:title;
+}
+
+nav {
+    grid-area:nav;
+    display:grid;
+    grid-template-areas:
+    'red1 red2 link1 link2'
+}
+
+.items {
+    display:grid;
+    grid-area:it;
+    grid-template-rows:repeat(3, 33%);
+    grid-template-areas:
+    'stuff1'
+    'stuff2'
+    'stuff3'
+
+}
+
+.stuff1 {
+    grid-area:stuff1;
+    background-color:cornflowerblue;
+}
+
+.stuff2 {
+    grid-area:stuff2;
+    background-color:aquamarine;
+}
+
+.stuff3 {
+    grid-area:stuff3;
+    background-color:brown;
+}
