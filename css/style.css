@@ -68,6 +68,8 @@ nav {
     background-color:honeydew;
     grid-area:nav;
     display:grid;
+    margin-top:25.7px;
+    height:44.7px;
     grid-template-areas:
     'red1 red2 red3 link'
 }
