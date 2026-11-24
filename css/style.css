@@ -1,26 +1,37 @@
+* {
+    font-family: Garamond, serif;
+}
+
+:root {
+    --main: #1C444C;
+    --sec: #497680;
+}
+
 body {
     width:100vw;
-    height:100vh;
+    height:100%;
     min-height: 100vh;
     font-size:1.2rem;
     overflow-x:hidden;
+    background-image: linear-gradient(
+        to bottom,
+        var(--main),
+        var(--sec)
+    );
 }
 
 .wrapper {
     display:grid;
     height:auto;
     min-height: 100vh;
-    width:95%;
+    width:100%;
     margin: auto;
-    box-sizing: border-box;
-    border: 5px solid;
-    padding:10px;
-    border-radius: 2rem;
     background-color:rgb(28, 68, 76);
-    grid-template-rows: 20vh 1fr auto;
+    grid-template-rows: 15vh 1fr 1fr auto;
     grid-template-columns: 1fr;
     grid-template-areas:
     'hd'
+    'im'
     'it'
     'ft'
 }
@@ -29,25 +40,104 @@ header {
     grid-area:hd;
     display:grid;
     width:100%;
-    background-color:aqua;
-    grid-template-columns: 15% 35% 50%;
+    grid-template-columns: 10% 35% 55%;
     grid-template-areas:
     'logo title nav'
 }
 
 .logo {
     grid-area:logo;
+    margin-left:15px;
+    display:flex;
+    overflow:hidden;
+    height:100%;
+}
+
+.hej {
+    grid-area:logo;
+    background-color:honeydew;
+    text-align: center;
 }
 
 .title {
     grid-area:title;
+    background-color:honeydew;
 }
 
 nav {
+    background-color:honeydew;
     grid-area:nav;
     display:grid;
     grid-template-areas:
     'red1 red2 red3 link'
+}
+
+.red1 {
+    grid-area:red1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1.5rem;
+    transition: 0.5s ease;
+}
+
+.red2 {
+    grid-area:red2;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1.5rem;
+    transition: 0.5s ease;
+}
+
+.red3 {
+    grid-area:red3;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1.5rem;
+    transition: 0.5s ease;
+}
+
+.link {
+    grid-area:link; 
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1.5rem;
+    transition: 0.5s ease;
+}
+
+.red1:hover {
+    transform:scale(1.1);
+}
+
+.red2:hover {
+    transform:scale(1.1);
+}
+
+.red3:hover{
+    transform:scale(1.1);
+}
+
+.link:hover {
+    transform:scale(1.1);
+}
+
+.im {
+    grid-area:im;
+    grid-template-columns: 40% 60%;
+    grid-template-rows:50vh;
+    grid-template-areas:
+    'txt img'
+}
+
+.txt {
+    grid-area: txt;
+}
+
+.storimg {
+    grid-area: img;
 }
 
 .items {
@@ -62,22 +152,22 @@ nav {
 
 }
 
-.stuff1 {
+#stuff1 {
     grid-area:stuff1;
     background-color:cornflowerblue;
 }
 
-.stuff2 {
+#stuff2 {
     grid-area:stuff2;
     background-color:aquamarine;
 }
 
-.stuff3 {
+#stuff3 {
     grid-area:stuff3;
     background-color:brown;
 }
 
-img {
+.mountain {
     object-fit: cover;
     overflow:hidden;
     height:100%;
